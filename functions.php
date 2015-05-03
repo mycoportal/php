@@ -1,27 +1,5 @@
 <?php
 
-// ****Get cURL resource function
-function callcurlget($theurl) {
-// start callcurlget
-
-    $curlget = curl_init();
-    // Set some options - we are passing in a useragent too here
-    curl_setopt_array($curlget, array(
-        CURLOPT_RETURNTRANSFER => 1,
-        CURLOPT_URL => $theurl,
-        CURLOPT_USERAGENT => 'fDex'
-        ));
-
-    // Send the request & save response to $resp
-    $getresp = curl_exec($curlget);
-    return$getresp;
-
-    // Close request to clear up some resources
-    curl_close($curlget);
-
-//stop callcurlget
-}
-
 // ****Post cURL resource function
 function callcurlpost() {
 // start callcurlpost
